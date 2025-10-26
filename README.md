@@ -48,15 +48,15 @@ LOG_LEVEL=debug
 LOG_OUTPUT_JSON=0
 
 # JWT
-JWT_SECRET=unikomsecretjwt
-JWT_EXPIRES_IN=7d
+JWT_SECRET=
+JWT_EXPIRES_IN=
 BCRYPT_SALT_ROUNDS=12
 
 # Database 
 DB_HOST=postgres
 DB_PORT=5432
-DB_USER=postgres
-DB_PASS=123456a@
+DB_USER=unikom
+DB_PASS=
 DB_NAME=unikom
 
 # Redis
