@@ -74,7 +74,8 @@ docker-compose up -d
 
 ### 5. API Documentation
 All backend APIs are prefixed with /api.
-```1. Signup
+```
+1. Signup
 Endpoint: POST /api/auth/signup
 Description: Register a new user.
 
