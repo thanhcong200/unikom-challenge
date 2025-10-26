@@ -73,8 +73,9 @@ docker-compose up -d
 ```
 
 ### 5. API Documentation
-All backend APIs are prefixed with /api.\
+All backend APIs are prefixed with /api.
 1. Signup
+   ```
 Endpoint: POST /api/auth/signup
 Description: Register a new user.
 
@@ -97,8 +98,9 @@ Notes:
 - Password is hashed before saving.
 - Email must be unique.
 - Returns standard { data, meta, message } format.
-
+```
 2. Login
+```
 Endpoint: POST /api/auth/login
 Description: Authenticate user and return JWT token.
 
@@ -121,8 +123,9 @@ Description: Authenticate user and return JWT token.
 - Returns JWT token in access_token.
 - JWT token expires according to JWT_EXPIRES_IN (e.g., 7d).
 - Use this token as Authorization: Bearer <token> in subsequent requests.
-
+```
 3. Activities
+```
 - Endpoint: GET /api/activities
 - Query Parameters:
 Parameter	Type	Description
@@ -160,7 +163,7 @@ actions	string	Comma-separated actions: login, logout, search
   },
   "message": "Success"
 }
-
+```
 * Notes:
 - All APIs use a common response format with data, meta, and message.
 - Pagination metadata includes hasNextPage and hasPrevPage.
