@@ -79,7 +79,7 @@ All backend APIs are prefixed with /api.
 Endpoint: POST /api/auth/signup
 Description: Register a new user.
 
-Request Body:
+* Request Body:
 {
   "first_name": "John",
   "last_name": "Doe",
@@ -87,14 +87,14 @@ Request Body:
   "password": "password123"
 }
 
-Response Example:
+* Response Example:
 {
   "data": null
   "meta": null,
   "message": "User registered successfully"
 }
 
-Notes:
+* Notes:
 - Password is hashed before saving.
 - Email must be unique.
 - Returns standard { data, meta, message } format.
