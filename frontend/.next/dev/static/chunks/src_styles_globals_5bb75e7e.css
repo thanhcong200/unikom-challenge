@@ -1,0 +1,119 @@
+/* [project]/src/styles/globals.css [client] (css) */
+:root {
+  --bg: #f6f7fb;
+  --card: #fff;
+  --muted: #6b7280;
+  --primary: #0369a1;
+  --danger: #dc2626;
+  --border: #e5e7eb;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body, #__next {
+  height: 100%;
+}
+
+body {
+  background: var(--bg);
+  color: #111827;
+  margin: 0;
+  font-family: Inter, Roboto, -apple-system, Segoe UI, Helvetica Neue, Arial;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.header {
+  background: var(--card);
+  box-shadow: 0 1px 2px #0000000a;
+}
+
+.header .inner {
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  display: flex;
+}
+
+.header a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.form-row {
+  margin-bottom: 12px;
+}
+
+.input, .select, .textarea {
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 14px;
+}
+
+.button {
+  background: var(--primary);
+  color: #fff;
+  cursor: pointer;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 14px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.button.secondary {
+  background: #6b7280;
+}
+
+.text-muted {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.table th, .table td {
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+  padding: 8px 10px;
+}
+
+.pager {
+  align-items: center;
+  gap: 8px;
+  display: flex;
+}
+
+.filters {
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  display: flex;
+}
+
+@media (max-width: 768px) {
+  .filters {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+/*# sourceMappingURL=src_styles_globals_5bb75e7e.css.map*/

@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 30, "column": 0}, "map": {"version":3,"sources":["file:///D:/unikom/unikom-challenge/frontend/src/pages/index.tsx"],"sourcesContent":["import { useEffect } from 'react'\r\nimport { useRouter } from 'next/router'\r\nimport { useAuth } from '../utils/auth'\r\n\r\n\r\nexport default function Home() {\r\nconst { user } = useAuth()\r\nconst router = useRouter()\r\nuseEffect(() => {\r\nif (user) router.replace('/dashboard')\r\nelse router.replace('/login')\r\n}, [user])\r\nreturn null\r\n}"],"names":[],"mappings":";;;;AAAA;AACA;AACA;;;;;;;;AAGe,SAAS;IACxB,MAAM,EAAE,IAAI,EAAE,GAAG,IAAA,yHAAO;IACxB,MAAM,SAAS,IAAA,oIAAS;IACxB,IAAA,gHAAS,EAAC;QACV,IAAI,MAAM,OAAO,OAAO,CAAC;aACpB,OAAO,OAAO,CAAC;IACpB,GAAG;QAAC;KAAK;IACT,OAAO;AACP","debugId":null}}]
+}

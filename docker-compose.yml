@@ -1,0 +1,68 @@
+version: '3.9'
+
+services:
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: backend
+    restart: unless-stopped
+    env_file:
+      - ./backend/.env
+    ports:
+      - "8000:8000"
+    depends_on:
+      - postgres
+      - redis
+
+  # ------------------------
+  # Frontend service
+  # ------------------------
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: frontend
+    restart: unless-stopped
+    env_file:
+      - ./frontend/.env
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+
+  # ------------------------
+  # PostgreSQL service
+  # ------------------------
+  postgres:
+    image: postgres:15-alpine
+    container_name: postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: unikom
+      POSTGRES_PASSWORD: 123456a@A
+      POSTGRES_DB: unikom
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  # ------------------------
+  # Redis service
+  # ------------------------
+  redis:
+    image: redis:7-alpine
+    container_name: redis
+    restart: unless-stopped
+    ports:
+      - "6378:6379"
+    volumes:
+      - redisdata:/data
+
+# ------------------------
+# Volumes
+# ------------------------
+volumes:
+  pgdata:
+  redisdata:
